@@ -2,6 +2,8 @@
 
 Anti-detection Python Scraper for WhatIsMyBrowser.com
 
+JOIN [0xboz's Discord](https://discord.gg/JHt7UQu).
+
 ## Problem
 
 WhatIsMyBrowser.com blocks IPs if the script uses `Requests` and `BeautifulSoup4`.
@@ -14,8 +16,9 @@ Instead, the script takes advantage of Selenium Firefox web driver in headless m
 
 For the comparison purposes, this script has kept the method using `Requests` and `BeautifulSoup4` by simply passing an argument `method='requests'`. Before trying this option, it is highly recommended to switch a throw-away IP.
 
+### Make the changes in `main.py` accordingly
+
 ```python
-# Make the changes in main.py accordingly.
 if __name__ == "__main__":
     for row in what_is_my_browser(method='requests'):
         print(row)
@@ -26,28 +29,18 @@ if __name__ == "__main__":
 (Debian or Debian-based OS)  
 Open the terminal, and run the command below.
 
-Clone this project.
-
 ```shell
+# Clone this project
 git clone https://github.com/0xboz/whatismybrowser_com_scraper.git
 cd whatismybrowser_com_scraper
-```
 
-Create an virtual environment for this project.
-
-```shell
+# Create a venv
 python3 -m venv venv
-```
 
-Activate venv and install all required packages.
-
-```shell
+# Activate venv and install all required packages
 source venv/bin/activate
 (venv) pip install -r requirements.txt
-```
 
-Run the script.
-
-```shell
+# Run the script
 (venv) python main.py
 ```
